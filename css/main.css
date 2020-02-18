@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #EEE
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.container {
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+
+#box {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box>p {
+    font-size: 2em;
+    color: #333;
+}
+
+#box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+input {
+    position: absolute;
+    width: 100%;
+}
+
+input:nth-child(1) {
+    top: -35px;
+    left: -5px;
+}
+
+input:nth-child(2) {
+    transform: rotate(90deg);
+    right: -150px;
+    top: 110px;
+}
+
+input:nth-child(3) {
+    bottom: -35px;
+    transform: rotate(180deg);
+}
+
+input:nth-child(4) {
+    transform: rotate(90deg) scaleY(-1);
+    left: -150px;
+    top: 110px;
+}
+
+.alert {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCC;
+    color: #333;
+    z-index: 1;
+}
+
+.animate {
+    animation: alert .7s 2 alternate;
+}
+
+@keyframes alert {
+    0% {
+        visibility: visible;
+        transform: scale(0);
+        border-radius: 50%;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
